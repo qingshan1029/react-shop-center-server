@@ -4,7 +4,7 @@
   "main": "functions/server.js",
   "scripts": {
     "build": "netlify-lambda build server",
-    "start": "nodemon ./bin/www"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
