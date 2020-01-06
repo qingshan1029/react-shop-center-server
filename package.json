@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "main": "functions/server.js",
   "scripts": {
-    "build": "netlify-lambda build express",
+    "build": "netlify-lambda build server",
     "start": "nodemon ./bin/www"
   },
   "dependencies": {

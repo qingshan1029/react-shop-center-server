@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('../server/app');
 var debug = require('debug')('myapp:server');
 var http = require('http');
 var PORT = process.argv[2]&&process.argv[2].slice(-4)

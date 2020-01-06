@@ -7,9 +7,9 @@ var express = require('express');
 var mongoose = require('mongoose');
 var cors = require('cors')
 var expressValidator  = require('express-validator');//req.checkbody()
-const mongoConfig = require('./configs/mongo-config')
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const mongoConfig = require('../configs/mongo-config')
+var indexRouter = require('../routes');
+var usersRouter = require('../routes/users');
 const formData = require('express-form-data')
 const cloudinary = require('cloudinary')
 
@@ -27,8 +27,8 @@ var app = express()
 app.use(cors())
 //require('./seed');  // kkj-initialize mongodb (only one at first starting)
 
-app.use('/.netlify/functions/app', indexRouter);  // path must route to lambda
-app.use('/.netlify/functions/app', usersRouter);  // path must route to lambda
+app.use('/.netlify/functions/server', indexRouter);  // path must route to lambda
+app.use('/.netlify/functions/server', usersRouter);  // path must route to lambda
 
 // Express validator
 app.use(expressValidator({
