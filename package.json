@@ -1,9 +1,10 @@
 {
   "name": "ecommerce-nodejs",
   "version": "1.1.0",
-  "private": true,
+  "main": "functions/server.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "build": "netlify-lambda build express",
+    "start": "nodemon ./bin/www"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -30,6 +31,7 @@
     "mongoose": "^5.4.19",
     "morgan": "^1.9.1",
     "multer": "^1.4.1",
+    "netlify-lambda": "^1.6.3",
     "nodemailer": "^4.7.0",
     "nodemon": "^1.18.11",
     "parse-formdata": "^1.0.2",
