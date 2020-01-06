@@ -27,8 +27,8 @@ var app = express()
 app.use(cors())
 //require('./seed');  // kkj-initialize mongodb (only one at first starting)
 
-app.use('/.netlify/functions/app', indexRouter);  // path must route to lambda
-app.use('/.netlify/functions/app', usersRouter);  // path must route to lambda
+app.use('/.netlify/functions/index', indexRouter);  // path must route to lambda
+app.use('/.netlify/functions/users', usersRouter);  // path must route to lambda
 
 // Express validator
 app.use(expressValidator({
