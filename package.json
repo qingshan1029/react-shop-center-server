@@ -1,7 +1,7 @@
 {
   "name": "ecommerce-nodejs",
   "version": "1.1.0",
-  "main": "functions/server.js",
+  "main": "functions/app.js",
   "scripts": {
     "build": "netlify-lambda build server",
     "start": "node ./bin/www"
