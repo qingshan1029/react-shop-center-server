@@ -271,8 +271,8 @@ router.get('/filter', function (req, res, next) {
 //GET /checkout
 router.get('/checkout/:cartId', ensureAuthenticated, function (req, res, next) {
   const cartId = req.params.cartId
-//  const frontURL = 'https://zack-ecommerce-reactjs.herokuapp.com'
-    const frontURL = 'http://192.168.1.52:3000'  // kkj(front end address)
+  const frontURL = 'https://qingshan-shopping-client.netlify.com'
+// const frontURL = 'http://192.168.1.52:3000'  // kkj(front end address)
 
   Cart.getCartById(cartId, function (err, c) {
     if (err) return next(err)
